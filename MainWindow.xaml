@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:Jotter"
         mc:Ignorable="d"
         Title="Jotter" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid x:Name="MenuGrid" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -22,6 +22,7 @@
                 Grid.Column="0"
                 Width="60"
                 HorizontalAlignment="Left"
+                Click="FileButton_Click"
             />
         </Grid>
         <TextBox

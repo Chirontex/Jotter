@@ -20,9 +20,33 @@ namespace Jotter
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool _isFileButtonMenuOpened = false;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void FileButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this._isFileButtonMenuOpened)
+            {
+                //
+            }
+            else
+            {
+                var fileButtonListBox = new ListBox();
+                fileButtonListBox.Name = "FileButtonListBox";
+                fileButtonListBox.Items.Add("Открыть");
+                fileButtonListBox.Width = 100;
+                fileButtonListBox.Height = 30;
+                fileButtonListBox.VerticalAlignment = 0;
+                fileButtonListBox.HorizontalAlignment = 0;
+                fileButtonListBox.SetValue(Grid.RowProperty, 1);
+                MainGrid.Children.Add(fileButtonListBox);
+
+                this._isFileButtonMenuOpened = true;
+            }
         }
     }
 }
