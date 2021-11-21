@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Jotter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Jotter" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -16,7 +16,13 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="FileButton" Content="Файл" Grid.Column="1" />
+            <Button
+                x:Name="FileButton"
+                Content="Файл"
+                Grid.Column="1"
+                Width="60"
+                HorizontalAlignment="Left"
+            />
         </Grid>
     </Grid>
 </Window>
